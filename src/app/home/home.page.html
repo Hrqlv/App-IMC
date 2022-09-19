@@ -1,0 +1,38 @@
+<div class="d-flex flex-column m-4">
+  <h1 class="text-center">CALCULADORA IMC</h1>
+  <ion-fab (click)="limpar()" vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="refresh"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+  <figure class="foto">
+    <img src="assets/icon/pessoa.png">
+    <img src="assets/icon/mulher.png">
+  </figure>
+
+  <label for="Peso" class="mb-3 mt-2" class="text-left">
+    <h5>Peso (KG):</h5>
+  </label>
+  <input type="number" id="Peso" [(ngModel)]="Peso">
+
+  <label for="Altura" class="mb-3 mt-2" class="text-left">
+    <h5>Altura (M):</h5>
+  </label>
+  <input type="number" id="Altura" [(ngModel)]="Altura">
+
+  <div class="mx-auto">
+    <button class="btn btn-danger mt-5" (click)="calcularIMC()">
+      Calcular
+    </button>
+
+  </div>
+  <h2 class="text-center">{{resposta}}</h2>
+  <h2 class="text-center">IMC = {{resposta2}}</h2>
+</div>
+
+<div class="">
+  <figure class="foto">
+    <img src="assets/icon/imcfoto.jpg">
+  </figure>
+</div>
